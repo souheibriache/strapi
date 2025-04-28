@@ -2,11 +2,9 @@ import { formatDate } from "@/lib/utils";
 
 type Comment = {
   id: string;
-  attributes: {
-    content: string;
-    authorName: string;
-    publishedAt: string;
-  };
+  content: string;
+  authorName: string;
+  publishedAt: string;
 };
 
 export default function CommentList({ comments }: { comments: Comment[] }) {
