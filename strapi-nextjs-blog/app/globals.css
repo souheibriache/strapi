@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.rich-text h1 {
+  @apply text-3xl font-bold mb-4 mt-6;
+}
+
+.rich-text h2 {
+  @apply text-2xl font-bold mb-3 mt-5;
+}
+
+.rich-text h3 {
+  @apply text-xl font-bold mb-2 mt-4;
+}
+
+.rich-text p {
+  @apply mb-4;
+}
+
+.rich-text ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.rich-text ol {
+  @apply list-decimal pl-5 mb-4;
+}
+
+.rich-text a {
+  @apply text-blue-600 hover:underline;
+}
+
+.rich-text blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.rich-text pre {
+  @apply bg-gray-100 p-4 rounded my-4 overflow-x-auto;
+}
