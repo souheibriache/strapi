@@ -26,7 +26,7 @@ export async function fetchArticleBySlug(slug: string) {
     const response = await axios.get(`${API_URL}/api/articles`, {
       params: {
         "filters[slug][$eq]": slug,
-        populate: "coverImage,comments",
+        populate: "coverImage",
       },
     });
 
