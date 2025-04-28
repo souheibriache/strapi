@@ -19,6 +19,8 @@ export async function generateMetadata({
     return { title: "Article Not Found" };
   }
 
+  console.log({ article: article.comments });
+
   return {
     title: article.title,
     description:
@@ -67,7 +69,7 @@ export default async function ArticlePage({
         dangerouslySetInnerHTML={{ __html: article.content }}
       />
 
-      {article.author && (
+      {article?.author && (
         <div className="my-12">
           <AuthorCard author={article.author} />
         </div>

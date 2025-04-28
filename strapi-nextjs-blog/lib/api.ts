@@ -8,7 +8,7 @@ export async function fetchArticles() {
     const response = await axios.get(`${API_URL}/api/articles`, {
       params: {
         "filters[state][$eq]": "published",
-        populate: "coverImage",
+        populate: "*",
         sort: "publishedAt:desc",
       },
     });
@@ -26,7 +26,7 @@ export async function fetchArticleBySlug(slug: string) {
     const response = await axios.get(`${API_URL}/api/articles`, {
       params: {
         "filters[slug][$eq]": slug,
-        populate: "coverImage",
+        populate: "*",
       },
     });
 
@@ -42,7 +42,7 @@ export async function fetchUserArticles(token: string) {
   try {
     const response = await axios.get(`${API_URL}/api/articles`, {
       params: {
-        populate: "coverImage,author",
+        populate: "*",
         sort: "publishedAt:desc",
       },
       headers: {

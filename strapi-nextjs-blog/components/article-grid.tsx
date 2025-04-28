@@ -12,11 +12,7 @@ type Article = {
     url: string;
   };
   author: {
-    data: {
-      attributes: {
-        username: string;
-      };
-    } | null;
+    username: string;
   };
 };
 
@@ -57,9 +53,7 @@ export default function ArticleGrid({
               </h2>
 
               <div className="flex items-center text-sm text-gray-600 mb-2">
-                <span>
-                  By {article?.author?.data?.attributes.username || "Unknown"}
-                </span>
+                <span>By {article?.author?.username || "Unknown"}</span>
                 <span className="mx-1">•</span>
                 <span>{formatDate(article?.publishedAt)}</span>
               </div>
